@@ -1,0 +1,29 @@
+ WebDriver drivers;
+    
+    By email =  By.name("email");
+    By password = By.name("passwd");
+    By login = By.name("SubmitLogin");
+    
+      public Login(WebDriver drivers)
+      {
+    	  this.drivers=drivers;
+      }
+      public void setEmail(String strEmail)
+      {
+    	  drivers.findElement(email).sendKeys(strEmail);
+      }
+      public void setPassword(String strPassword)
+      {
+    	  drivers.findElement(password).sendKeys("strPassword");
+      }
+       public void clickLogin()
+       {
+    	  drivers.findElement(login).click();
+       }
+       
+       public void LoginAcc(String strEmail,String strPassword)
+       {
+    	   this.setEmail(strEmail);
+    	   this.setPassword(strPassword);
+    	   this.clickLogin();
+       }
